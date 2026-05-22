@@ -22,14 +22,14 @@ uv sync --extra adk
 ### Option A: Gemini (default)
 
 ```bash
-export GOOGLE_API_KEY="your-gemini-api-key"
+set GOOGLE_API_KEY="your-gemini-api-key"
 ```
 
 ### Option B: Groq
 
 ```bash
-export MODEL_PROVIDER=groq
-export GROQ_API_KEY="your-groq-api-key"
+set MODEL_PROVIDER=groq
+set GROQ_API_KEY="your-groq-api-key"
 ```
 
 ### Option C: Vertex AI
@@ -43,11 +43,11 @@ gcloud auth application-default login
 Then configure the provider:
 
 ```bash
-export MODEL_PROVIDER=vertex
-export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
-export GOOGLE_CLOUD_LOCATION="global"
+set MODEL_PROVIDER=vertex
+set GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
+set GOOGLE_CLOUD_LOCATION="global"
 # optional
-export VERTEX_MODEL="gemini-2.5-flash-lite"
+set VERTEX_MODEL="gemini-2.5-flash-lite"
 ```
 
 ## Step 1: Define the MCP tools
@@ -92,7 +92,7 @@ You should see:
 Keep the MCP server terminal running, then in a new terminal run ADK:
 
 ```bash
-export MCP_SERVER_URL="http://127.0.0.1:9001/sse"
+set MCP_SERVER_URL="http://127.0.0.1:9001/sse"
 uv run adk web src/tutorials/t05_mcp_agent
 ```
 
